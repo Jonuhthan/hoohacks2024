@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const resultDiv = document.getElementById("result");
 
     // Fetch available currencies and populate select options
-    fetch('https://open.er-api.com/v6/latest/AUD')
+    fetch('https://open.er-api.com/v6/latest/USD')
         .then(response => response.json())
         .then(data => {
             // Iterate through each currency and create options for both source and target select elements
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error("Error fetching conversion rate:", error));
     });
-
+    
     // Function to update flag backgrounds
     function updateFlag(selectElement, flagElementId) {
         const countryCode = selectElement.value.substring(0, 2).toLowerCase(); // Assuming the currency code corresponds to country code
@@ -75,4 +75,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize flags on first load
     updateFlag(fromSelect, 'fromFlag');
     updateFlag(toSelect, 'toFlag');
+
 });
