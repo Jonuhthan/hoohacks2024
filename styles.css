@@ -61,10 +61,14 @@ button[type="submit"]:hover {
     background-color: #45a049; /* Change background color on hover */
 }
 
-/* Style for the result display */
+/* Style for the initial result display (empty) */
 #result {
     margin-top: 20px; /* Add margin top */
     padding: 10px; /* Add padding */
+}
+
+/* Style for the result display when populated */
+.populated-result {
     background-color: #e7f4e4; /* Set background color */
     border-left: 5px solid #5cb85c; /* Add left border */
     color: #3c763d; /* Set text color */

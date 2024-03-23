@@ -39,9 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 const conversionRate = data.rates[toCurrency];
                 const convertedAmount = amount * conversionRate;
                 resultDiv.textContent = `${amount} ${fromCurrency} is approximately ${convertedAmount.toFixed(2)} ${toCurrency}`;
-            })
-            .catch(error => console.error("Error fetching conversion rate:", error));
-    });
+            // Add the class to show the green background only when there is a result
+            resultDiv.classList.add('populated-result');
+        })
+        .catch(error => {
+            console.error("Error fetching conversion rate:", error);
+            // Clear any existing content and remove the green background class
+            resultDiv.textContent = '';
+            resultDiv.classList.remove('populated-result');
+        });
+});
+
+// Initialize the result without the green background
+resultDiv.classList.remove('populated-result');
     
     // Function to update flag backgrounds
     function updateFlag(selectElement, flagElementId) {
