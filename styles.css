@@ -106,7 +106,6 @@ button[type="submit"]:hover {
     display: inside;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
     color: white;
     padding: 10px;
     font-family: Arial, sans-serif;
@@ -114,8 +113,8 @@ button[type="submit"]:hover {
 
 /* Style for the tab button */
 .tab-button {
-    background-color: rgb(116, 116, 116);
-    color: white;
+    background-color: white(116, 116, 116);
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -124,14 +123,14 @@ button[type="submit"]:hover {
 }
 
 .tab-button:hover {
-    background-color: #777;
+    background-color: rgb(210, 210, 210);
 }
 
 /* Style for the tab content */
 .tab-content {
     display: none;
-    background-color: #555;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     padding: 20px;
     width: 100%;
 }
