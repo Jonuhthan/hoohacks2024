@@ -1,16 +1,20 @@
 /* General body styles */
 body {
     font-family: Arial, sans-serif; /* Set the font family */
-    background-color: #f4f4f4; /* Set the background color */
-    color: #333; /* Set the text color */
+    background-image: url('rich-history-of-currencies-promo.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1); /* Set the background color */
+    color: #333333; /* Set the text color */
     margin: 0; /* Remove default margin */
     padding: 20px; /* Add padding */
 }
 
 /* Container for the form and result */
 .container {
+    margin-top: 80px; /* Height from the top */
+    margin-left: auto; /* Width from the side */
+    margin-right: auto;
     max-width: 600px; /* Set maximum width */
-    margin: auto; /* Center the container */
     background: white; /* Set background color */
     padding: 20px; /* Add padding */
     border-radius: 8px; /* Add border radius */
@@ -96,6 +100,49 @@ button[type="submit"]:hover {
 #from::placeholder, #to::placeholder {
     color: lightgrey; /* Set placeholder text color */
 }
+
+/* Bar Tab styling */
+.tab-container {
+    display: inside;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the tab button */
+.tab-button {
+    background-color: rgb(116, 116, 116);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px; /* Add border radius */
+}
+
+.tab-button:hover {
+    background-color: #777;
+}
+
+/* Style for the tab content */
+.tab-content {
+    display: none;
+    background-color: #555;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Show tab content when tab is active */
+.active {
+    display: block;
+}
+
+
+
 
 
 /* Responsive Design */
