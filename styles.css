@@ -11,7 +11,7 @@ body {
 
 /* Container for the form and result */
 .container {
-    margin-top: 80px; /* Height from the top */
+    margin-top: 70px; /* Height from the top */
     margin-left: auto; /* Width from the side */
     margin-right: auto;
     max-width: 600px; /* Set maximum width */
