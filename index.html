@@ -9,26 +9,38 @@
 <body>
     <div class="container">
         <h1>Currency Converter</h1>
+        <!-- Currency conversion form -->
         <form id="currency-form">
             <div class="form-group">
                 <label for="amount">Amount:</label>
                 <input type="number" id="amount" name="amount" min="0" step="any" required>
             </div>
+            <!-- Select source currency -->
             <div class="form-group">
                 <label for="from">From:</label>
-                <select id="from" name="from" required>
-                    <!-- Add options for source currencies dynamically using JavaScript -->
-                </select>
+                <div class="input-group">
+                    <div class="flag" id="fromFlag"><!-- Flag will be added here --></div>
+                    <select id="from" name="from" required>
+                        <!-- Options will be added dynamically -->
+                    </select>
+                </div>
             </div>
+            <!-- Switch button for switching source and target currencies -->
+            <button type="button" id="switchButton" aria-label="Switch Currencies">&#8644;</button> <!-- This is the switch button -->
+            <!-- Select target currency -->
             <div class="form-group">
                 <label for="to">To:</label>
-                <select id="to" name="to" required>
-                    <!-- Add options for target currencies dynamically using JavaScript -->
-                </select>
-            </div>
+                <div class="input-group">
+                    <div class="flag" id="toFlag"><!-- Flag will be added here --></div>
+                    <select id="to" name="to" required>
+                        <!-- Options will be added dynamically -->
+                    </select>
+                </div>
+            <!-- Submit button for converting currencies -->
             <button type="submit">Convert</button>
         </form>
-        <div id="result"></div> <!-- Result will be displayed here -->
+        <!-- Result will be displayed here -->
+        <div id="result"></div>
     </div>
 
     <script src="script.js"></script> <!-- Link your JavaScript file here -->

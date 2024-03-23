@@ -1,0 +1,111 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif; /* Set the font family */
+    background-color: #f4f4f4; /* Set the background color */
+    color: #333; /* Set the text color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding */
+}
+
+/* Container for the form and result */
+.container {
+    max-width: 600px; /* Set maximum width */
+    margin: auto; /* Center the container */
+    background: white; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add box shadow */
+}
+
+h1 {
+    text-align: center; /* Center align heading */
+    color: #333; /* Set heading color */
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.form-group label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 5px; /* Add margin bottom */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%; /* Set width to full */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 4px; /* Add border radius */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    width: 100%; /* Set width to full */
+    background-color: #4CAF50; /* Set background color */
+    color: white; /* Set text color */
+    padding: 14px 20px; /* Add padding */
+    margin: 8px 0; /* Add margin */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+
+/* Style for the result display */
+#result {
+    margin-top: 20px; /* Add margin top */
+    padding: 10px; /* Add padding */
+    background-color: #e7f4e4; /* Set background color */
+    border-left: 5px solid #5cb85c; /* Add left border */
+    color: #3c763d; /* Set text color */
+}
+
+/* Style the input group for flag and select box */
+.input-group {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items */
+}
+
+/* Style the flag container */
+.flag {
+    width: 50px; /* Set width */
+    height: 30px; /* Set height */
+    background-size: cover; /* Set background size */
+    margin-right: 10px; /* Add margin right */
+}
+
+/* Style the switch button */
+#switchButton {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    font-size: 24px; /* Set font size */
+    cursor: pointer; /* Add cursor pointer */
+    margin: 20px auto; /* Center the button and add margin */
+    display: block; /* Display as block */
+}
+
+/* Style the select elements to include the placeholder 'From' and 'To' */
+#from::placeholder, #to::placeholder {
+    color: lightgrey; /* Set placeholder text color */
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Set width to full */
+        padding: 0; /* Remove padding */
+        box-shadow: none; /* Remove box shadow */
+        border-radius: 0; /* Remove border radius */
+    }
+
+    body {
+        padding: 0; /* Remove body padding */
+    }
+}
