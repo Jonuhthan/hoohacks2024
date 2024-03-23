@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("currency-form");
     const result = document.getElementById("result");
     
-    fetch("https://api.exchangerate-api.com/v4/latest/USD")
+    fetch("https://open.er-api.com/v6/latest/USD")
         .then(response => response.json())
         .then(data => {
             populateFields(toSelect, data);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const targetCurrency = toSelect.value;
 
         // Fetch conversion rate
-        fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
+        fetch(`https://open.er-api.com/v6/latest/USD`)
             .then(response => response.json())
             .then(data => {
                 const conversionRate = data.rates[targetCurrency];
