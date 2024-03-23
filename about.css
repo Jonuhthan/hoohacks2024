@@ -1,0 +1,38 @@
+/* about.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Set the background color */
+    color: #333;
+}
+
+.container {
+    max-width: 600px; /* Set maximum width */
+    margin: auto; /* Center the container */
+    background: white; /* Set background color */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add box shadow */
+}
+
+h1 {
+    text-align: center; /* Center align heading */
+    color: #333; /* Set heading color */
+}
+
+strong {
+    color: #45a049;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+strong {
+    display: block;
+    margin-bottom: 0px;
+}
+

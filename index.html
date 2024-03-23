@@ -10,13 +10,21 @@
 </head>
 
 <body>
+    <div class="tab-container">
+        <!-- Home and About buttons -->
+        <a href="index.html"><button class="tab-button">Home</button></a>
+
+        <a href="about.html"><button class="tab-button">About Us</button></a>
+    </div>
+
     <div class="container">
         <h1>Currency Converter</h1>
         <!-- Currency conversion form -->
         <form id="currency-form">
             <div class="form-group">
                 <label for="amount">Amount:</label>
-                <input type="number" id="amount" name="amount" min="0" step="any" required>
+                
+                <input type="number" id="amount" name="amount" min="0" step="any" required value="100">
             </div>
             <!-- Select source currency -->
             <div class="form-group">
