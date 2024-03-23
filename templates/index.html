@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="../style/styles.css"> <!-- Link your CSS file here -->
+    </head>
+    <body>
+        <div class="container">
+            <h1>Currency Converter</h1>
+            <form id="currency-form">
+                <div class="form-group">
+                    <input type="number" id="amount" name="amount" min="0" step="any" placeholder="Amount..."required>
+                </div>
+                <div class="form-group">
+                    <select id="from" name="from" required>
+                        <option value="" disabled selected hidden>From:</option>
+                        <!-- Other options appended by JavaScript API call -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="to" name="to" required>
+                        <option value="" disabled selected hidden>To:</option>
+                        <!-- Other options appended by JavaScript API call -->
+                    </select>
+                </div>
+                <button type="submit">Convert</button>
+            </form>
+            <div id="result"></div> <!-- Result will be displayed here -->
+        </div>
+
+        <script src="../static/script.js"></script> <!-- Link your JavaScript file here -->
+    </body>
+</html>
