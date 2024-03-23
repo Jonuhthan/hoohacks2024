@@ -2,6 +2,9 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-image: url('rich-history-of-currencies-promo.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1); /* Set the background color */
     margin: 0px;
     padding: 20px;
     background-color: #f4f4f4; /* Set the background color */
@@ -9,8 +12,10 @@ body {
 }
 
 .container {
+    margin-top: 80px;
     max-width: 600px; /* Set maximum width */
-    margin: auto; /* Center the container */
+    margin-left: auto; /* Width from the side */
+    margin-right: auto;
     background: white; /* Set background color */
     padding: 20px; /* Add padding */
     border-radius: 8px; /* Add border radius */
@@ -34,5 +39,44 @@ p {
 strong {
     display: block;
     margin-bottom: 0px;
+}
+
+/* Bar Tab styling */
+.tab-container {
+    display: inside;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the tab button */
+.tab-button {
+    background-color: white(116, 116, 116);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px; /* Add border radius */
+}
+
+.tab-button:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+/* Style for the tab content */
+.tab-content {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+}
+
+/* Show tab content when tab is active */
+.active {
+    display: block;
 }
 
