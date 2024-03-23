@@ -45,9 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to update flag backgrounds
     function updateFlag(selectElement, flagElementId) {
-        const countryCode = selectElement.value.substring(0, 2).toLowerCase(); // Assuming the currency code corresponds to country code
+        let countryCode = selectElement.value.substring(0, 2).toUpperCase(); // Assuming the currency code corresponds to country code
+        if(countryCode === "AN"){
+            countryCode = "NL";
+        }
         const flagElement = document.getElementById(flagElementId);
-        flagElement.style.backgroundImage = `url('https://flagcdn.com/w20/${countryCode}.jpg')`;
+        flagElement.style.backgroundImage = `url('https://countryflagsapi.netlify.app/flag/${countryCode}.svg')`;
     }
 
     // Update flags when currency selection changes

@@ -74,10 +74,12 @@ button[type="submit"]:hover {
 
 /* Style the flag container */
 .flag {
-    width: 50px; /* Set width */
-    height: 30px; /* Set height */
-    background-size: cover; /* Set background size */
-    margin-right: 10px; /* Add margin right */
+    width: 50px; /* Adjust width if needed */
+    height: 30px; /* Adjust height if needed */
+    background-size: contain; /* Makes sure the image is scaled to fit the box */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the flag box */
+    margin-right: 15px;
 }
 
 /* Style the switch button */
