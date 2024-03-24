@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Initialize select, form, and result tags
     const fromSelect = document.getElementById("from");
     const toSelect = document.getElementById("to");
     const form = document.getElementById("currency-form");
@@ -8,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('https://open.er-api.com/v6/latest/USD')
         .then(response => response.json())
         .then(data => {
-            // Iterate through each currency and create options for both source and target select elements
+            // Iterate through each currency and create options for both "From" and "To" select tags
             for (const currency in data.rates) {
                 const optionFrom = document.createElement("option");
                 optionFrom.value = currency;
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error("Error fetching currencies:", error));
 
-    // Handle form submission
+    // Waits for form to be submitted
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         const amount = parseFloat(document.getElementById("amount").value);
@@ -38,28 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 const conversionRate = data.rates[toCurrency];
                 const convertedAmount = amount * conversionRate;
+                // Update result to express final conversion
                 resultDiv.textContent = `${amount} ${fromCurrency} is approximately ${convertedAmount.toFixed(2)} ${toCurrency}`;
-            // Add the class to show the green background only when there is a result
+            // Add green background only when there is a result
             resultDiv.classList.add('populated-result');
         })
         .catch(error => {
             console.error("Error fetching conversion rate:", error);
-            // Clear any existing content and remove the green background class
+            // Removes green background and resets result content
             resultDiv.textContent = '';
             resultDiv.classList.remove('populated-result');
         });
 });
 
-// Initialize the result without the green background
+// Initialize result without green background
 resultDiv.classList.remove('populated-result');
     
-    // Function to update flag backgrounds
+    // Updates flag backgrounds
     function updateFlag(selectElement, flagElementId) {
-        let countryCode = selectElement.value.substring(0, 2).toUpperCase(); // Assuming the currency code corresponds to country code
+        let countryCode = selectElement.value.substring(0, 2).toUpperCase(); // Assumes first 2 letters of currency abbreviation corresponds to country code
         if(countryCode === "AN"){
-            countryCode = "NL";
+            countryCode = "NL";     // Netherlands is exception
         }
         const flagElement = document.getElementById(flagElementId);
+        // CountryFlagsAPI call, returns PNG image
         flagElement.style.backgroundImage = `url('https://countryflagsapi.netlify.app/flag/${countryCode}.svg')`;
     }
 
@@ -72,7 +75,7 @@ resultDiv.classList.remove('populated-result');
         updateFlag(this, 'toFlag');
     });
 
-    // Handle the currency switch button
+    // Switches currency positions when swap button is pressed
     document.getElementById("switchButton").addEventListener("click", function() {
         let temp = fromSelect.value;
         fromSelect.value = toSelect.value;
@@ -81,8 +84,6 @@ resultDiv.classList.remove('populated-result');
         // Update flags accordingly
         updateFlag(fromSelect, 'fromFlag');
         updateFlag(toSelect, 'toFlag');
-
-        // Optionally, re-fetch conversion rates and update result
     });
 
     // Initialize flags on first load

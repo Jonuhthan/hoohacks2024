@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+    <body>
+        <div class="tab-container">
+            <!-- Home and About buttons -->
+            <a href="../templates/index.html"><button class="tab-button">Home</button></a>
+            <a href="../templates/about.html"><button class="tab-button">About Us</button></a>
+        </div>
+        <div class="container">
+            <h1>Currency Converter</h1>
+            <!-- Form to get currencies to be converted and amount -->
+            <form id="currency-form">
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" min="0" step="any" required placeholder="Enter an amount...">
+                </div>
+                <!-- Select source currency -->
+                <div class="form-group">
+                    <label for="from">From:</label>
+                    <div class="input-group">
+                        <div class="flag" id="fromFlag"> <!-- Flag is added here --> </div>
+                        <select id="from" name="from" required>
+                            <!-- Options are added after ExchangeRate API call  -->
+                            <option disabled hidden selected>USD</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Switch button for switching "From" and "To" currencies -->
+                <button type="button" id="switchButton" aria-label="Switch Currencies">&#8644;</button> <!-- Switch button -->
+                <!-- Select target currency -->
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <div class="input-group">
+                        <div class="flag" id="toFlag"><!-- Flag will be added here --></div>
+                        <select id="to" name="to" required>
+                            <!-- Options are added after ExchangeRate API call  -->
+                            <option disabled hidden selected></option>
+                        </select>
+                    </div>
+                <!-- Submit button for converting currencies -->
+                <button type="submit">Convert</button>
+            </form>
+            <!-- Result displayed here -->
+            <div id="result"></div>
+        </div>
+        <script src="../static/script.js"></script> 
+    </body>
+</html>

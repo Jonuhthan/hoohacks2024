@@ -1,30 +1,28 @@
-/* about.css */
-
 body {
     font-family: Arial, sans-serif;
-    background-image: url('rich-history-of-currencies-promo.jpg');
+    background-image: url('../static/images/rich-history-of-currencies-promo.jpg');
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 1); /* Set the background color */
+    background-color: rgba(255, 255, 255, 1);
     margin: 0px;
     padding: 20px;
-    background-color: #f4f4f4; /* Set the background color */
+    background-color: #f4f4f4;
     color: #333;
 }
 
 .container {
     margin-top: 70px;
-    max-width: 600px; /* Set maximum width */
-    margin-left: auto; /* Width from the side */
+    max-width: 600px; 
+    margin-left: auto; 
     margin-right: auto;
-    background: white; /* Set background color */
-    padding: 20px; /* Add padding */
-    border-radius: 8px; /* Add border radius */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add box shadow */
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 h1 {
-    text-align: center; /* Center align heading */
-    color: #333; /* Set heading color */
+    text-align: center; 
+    color: #333; 
 }
 
 strong {
@@ -41,7 +39,6 @@ strong {
     margin-bottom: 0px;
 }
 
-/* Bar Tab styling */
 .tab-container {
     display: inside;
     justify-content: space-between;
@@ -59,14 +56,13 @@ strong {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 4px; /* Add border radius */
+    border-radius: 4px; 
 }
 
 .tab-button:hover {
     background-color: rgb(210, 210, 210);
 }
 
-/* Style for the tab content */
 .tab-content {
     display: none;
     background-color: rgb(255, 255, 255);

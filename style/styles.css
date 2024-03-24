@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../static/images/rich-history-of-currencies-promo.jpg');
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1); 
+    color: #333333; 
+    margin: 0; /* Removes default margin */
+    padding: 20px;
+}
+
+.container {
+    margin-top: 70px; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    background: white; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center; 
+    color: #333; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; /* Add margin bottom */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* When mouse hovers over button, turns darker green */
+}
+
+#result {
+    margin-top: 20px; 
+    padding: 10px; 
+}
+
+/* Style for the result display when populated */
+.populated-result {
+    background-color: #e7f4e4; 
+    border-left: 5px solid #5cb85c;
+    color: #3c763d;
+}
+
+/* Style the input group for flag and select box */
+.input-group {
+    display: flex; 
+    align-items: center;
+}
+
+/* Style the flag container */
+.flag {
+    width: 50px; 
+    height: 30px; 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin-right: 15px;
+}
+
+/* Style the switch button */
+#switchButton {
+    background: none;
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+    margin: 20px auto;
+    display: block; 
+}
+
+/* Styling for placeholders 'From' and 'To' */
+#from::placeholder, #to::placeholder {
+    color: lightgrey;
+}
+
+.tab-container {
+    display: inside;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.tab-button {
+    background-color: white(116, 116, 116);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.tab-button:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.tab-content {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+}
+
+.active {
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%; 
+        padding: 0; 
+        box-shadow: none; 
+        border-radius: 0;
+    }
+
+    body {
+        padding: 0; 
+    }
+}
